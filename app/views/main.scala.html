@@ -1,0 +1,27 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-theme.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.2-min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap.js")" type="text/javascript"></script>
+    </head>
+    <body>
+    <div class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+		        <div class="navbar-header">
+		            <a class="navbar-brand" href="javascript:void(0)" style="color:whitesmoke;margin-left:80px;">Online Store Project</a>
+		        </div>
+		</nav>
+		<div class="row">
+        	@content
+        </div>
+    </body>
+</html>

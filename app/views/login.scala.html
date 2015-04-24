@@ -1,0 +1,23 @@
+@(form: Form[Application.Login])
+@import helper._
+
+@main("Online Store Project") {
+@helper.form(routes.Application.authenticate) {
+<form class="form-signin" id="loginForm">
+      <h2 class="form-signin-heading">Please login</h2>
+      <input type="email" class="form-control" id="confUsername" name="email" placeholder="Email Address" required="" autofocus=""/>
+	  <input type="password" class="form-control" id="confPassword" name="password" placeholder="Password" required=""/>
+      <button class="btn btn-lg btn-success btn-block" id="btnSubscribe" type="submit" style="margin-top:25px;">Login</button>   
+</form>
+  @if(flash.contains("success")) {
+    <p class="success">
+        <strong><center>@flash.get("success")</center></strong>
+    </p>
+		}
+		@if(flash.contains("error")) {
+    <p class="error">
+        <strong><center>@flash.get("error")</center></strong>
+    </p>
+		}
+}
+}
